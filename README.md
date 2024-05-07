@@ -1,16 +1,67 @@
 # resume_app_daily_task
 
-A new Flutter project.
 
-## Getting Started
+## Status Bar & Device Orientation
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Status Bar
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+  class ResumeAppDialyTask extends StatelessWidget {
+  const ResumeAppDialyTask({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    //statusBarColor
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: Colors.brown),
+    );
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      routes: AppRoutes.routes,
+    );
+  }
+}
+```
+
+In appBar
+
+```bash
+  
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+          systemOverlayStyle:const SystemUiOverlayStyle(statusBarColor: Colors.brown),
+      ),
+    );
+  }
+}
+```
+
+
+## Device Orientation
+
+```javascript
+class ResumeAppDialyTask extends StatelessWidget {
+  const ResumeAppDialyTask({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    //Orientation
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+
+    ]);
+  
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      routes: AppRoutes.routes,
+    );
+  }
+}
+```
+
