@@ -70,7 +70,7 @@
 - Generics provide a way to write reusable code that can work with different types. 
 - Generics are denoted by using angle brackets < > and a type parameter.
 
-###
+##
 ## 👉 Map
 
 **Defination :**  Map is an object that stores data in the form of a key-value pair.
